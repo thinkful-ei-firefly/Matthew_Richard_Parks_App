@@ -26,11 +26,15 @@ html::after {
   position: absolute;
   z-index: -1;
 }
+
 body {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
   font-size: 1.6rem;
   background-color: #20bf55;
   background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
 }
+
 main {
   display: flex;
   justify-content: center;

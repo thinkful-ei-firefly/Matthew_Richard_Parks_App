@@ -10,19 +10,23 @@ const getParks = (states, limit) => {
 
 //Converts Result To Html
 const getParkHtml = arr => {
-  const resultHtml = arr
-    .map(
-      ({ fullName, description, url, directionsUrl }) => `<div class="location">
+  const resultHtml = arr.map(mapLocationsToHtml).join("");
+  $(".results").html(resultHtml);
+};
+
+//mapping fuction
+const mapLocationsToHtml = ({
+  fullName,
+  description,
+  url,
+  directionsUrl
+}) => `<div class="location">
 <h3>${fullName}</h3>
 <p>${description}</p>
 <a href="${url}">Check Out Their Link</a>
 <br />
 <a href="${directionsUrl}">Get Directions</a>
-</div>`
-    )
-    .join("");
-  $(".results").html(resultHtml);
-};
+</div>`;
 
 const handleSubmit = () => {
   $(".form").on("submit", e => {
