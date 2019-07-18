@@ -1,0 +1,70 @@
+/* Global Styles */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  position: relative;
+  height: 100vh;
+}
+
+html::after {
+  content: "";
+  background: url("/park1.jpg") repeat center center fixed;
+  opacity: 0.9;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  top: 2rem;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #20bf55;
+  background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+.form,
+.results {
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+  box-shadow: 3px 3px 5px 6px #777;
+  border-radius: 50px;
+  margin-top: 60px;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+  opacity: 0.9;
+  padding: 3rem;
+  font-weight: bold;
+}
+
+.location {
+  padding: 2rem;
+  border: 1px solid #777;
+}
